@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+</head>
+from PIL import Image
+im= Image.open("photo.jpe")
+print(im)
+Pi= list(im.getdata())
+newlist = [] #creates a blank list
+for g in Pi:
+    R=g[0]
+    G=g[1]
+    B=g[2]
+    I = R + G + B
+    if I < 182:
+        newlist.append((0,51,76)) #puts this tupple (0,51,76) at the index g
+        
+    elif I >= 182 and I < 364:
+        newlist.append((217,26,33))
+                
+    elif I >= 364 and I < 546:
+        newlist.append((112,150,158))
+        
+    elif I >= 546:
+        newlist.append((252,107,166))
+
+ima = Image.new("RGB", (183, 150))
+ima.putdata(newlist)
+ima.rotate(0).show()
+
+#newlist contains: new values of pixel colors
+</body>
+

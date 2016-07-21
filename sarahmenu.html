@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+</head>
+import random
+adjective=["spicy","sweet","savory,""sour","bitter","dry","bland","fresh","rich","salty","minty","flavorful","tasty","roasted","burnt"]
+adjective_length=len(adjective)
+verbs=["running","jumping","swimming","diving","listening","seeing","thinking","cutting","flowing","flying","crawling"]
+verbs_length=len(verbs)
+foods=["chicken","salmon","frog","meat","turkey","pork","ham","bacon","talapia","snapper","vegetables","spinach"]
+foods_length=len(foods)
+cooking_styles=["frying","boiling","steaming","grilling","baking","hibachi","pressure_cooking","breading","blanching"]
+cooking_styles_length=len(cooking_styles)
+for a in range(6):
+    var1=random.randint(0,cooking_styles_length-1)
+    var2=random.randint(0,adjective_length-1)
+    var3=random.randint(0,foods_length-1)
+    randstyle=cooking_styles[var1]
+    randadj=adjective[var2]
+    randfoods=foods[var3]
+    menu=randstyle+randadj+randfoods
+    print(menu)
+</body>

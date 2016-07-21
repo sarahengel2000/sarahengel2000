@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Example</title>
+    <script>
+      function myFunction() {
+		var image=document.getElementById("myImage");
+	  if (image.src.match("screenshot.jpg"))
+	  {image.src="photo.jpe";
+		image.alt="pic";}
+	else{
+	image.src="screenshot.jpg";
+	image.alt="screen";}
+	}
+    </script>
+  </head>
+  <body>
+    <h1 id="welcome">Welcome to my page!</h1>
+	
+	<button id= "button" onclick="myFunction()">img 1</button>
+	<img id="myImage" src="screenshot.jpg" alt="screen" >
+	<!-- <button onclick="">img 2</button> -->
+  </body>
+</html>
